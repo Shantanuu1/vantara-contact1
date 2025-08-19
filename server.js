@@ -19,7 +19,10 @@ mongoose.connect(MONGO_URI)
 const Contact = require('./models/Contact');
 
 // Test route
-app.get('/health', (req, res) => res.json({ ok: true }));
+app.get("/health", (req, res) => {
+  res.json({ ok: true });
+});
+
 
 // Save contact form
 app.post('/api/contact', async (req, res) => {
